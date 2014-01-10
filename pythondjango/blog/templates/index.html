@@ -1,0 +1,23 @@
+<!DOCTYPE title PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>{{title}}</title>
+</head>
+<body>
+<ul>
+{% if user %}
+	<li>name : {{user.name}}</li>
+
+{% else %}
+
+not exist
+
+{% endif %}
+{% for book in book_list %}
+<li>{{book}}</li>
+{% endfor%}
+{% for k,v in user.items %}
+<li>{{forloop.first}}.{{k}}:{{v}}</li>
+{% endfor%}
+</ul>
+</body>
+</html>
